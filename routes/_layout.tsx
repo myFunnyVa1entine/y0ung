@@ -4,14 +4,20 @@ import Logo from "../components/logo.tsx";
 
 export default function layout({ Component }: PageProps) {
   return (
-    <section class="layout sm:grid sm:grid-cols-[220px_1fr] h-screen">
-      <div class="p-4 flex gap-4 justify-between items-center sm:block">
+    <section class="bg-black">
+      <nav class="px-4 py-2">
         <Logo />
         <Aside />
-      </div>
-      <div class="px-4">
+      </nav>
+      <div class="pb-12">
         <Component />
       </div>
+      <footer class="text-center text-white py-8">
+        <p>
+          &copy; {new Date().getFullYear()}{" "}
+          Forever Young Studio. All Rights Reserved.
+        </p>
+      </footer>
     </section>
   );
 }

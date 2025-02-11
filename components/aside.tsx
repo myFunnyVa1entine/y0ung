@@ -1,15 +1,16 @@
 export default function Aside() {
   return (
-    <aside class="text-2xl sm:pt-10 sm:pl-2">
-      <ul class="flex gap-4 sm:flex-col">
+    <aside class="text-xl md:text-2xl pt-2 pb-4 text-white">
+      <ul class="flex justify-center gap-6">
         <li>
-          <a href="videos">
-            videos
+          <a href="#" class="hover:text-red-600 duration-150">
+            MUSIC + VIDEO
           </a>
         </li>
+
         <li>
-          <a href="portfolio">
-            portfolio
+          <a href="#" class="hover:text-red-600 duration-150">
+            ARCHIVE
           </a>
         </li>
       </ul>
