@@ -15,20 +15,15 @@ function Image({ name, a }: Image) {
   );
 }
 
-export default function Albums() {
+export default function Albums({ classname }: { classname: string }) {
   const albums = [
-    { id: 0, title: "smallroom", link: "https://linksalad.net/ywS2HpUHWY" },
-    { id: 1, title: "someday", link: "https://linksalad.net/RlAtoLMxrT" },
-    {
-      id: 2,
-      title: "rocksinn",
-      link: "https://www.melon.com/album/detail.htm?albumId=347708",
-    },
+    { title: "smallroom", src: "https://linksalad.net/ywS2HpUHWY" },
+    { title: "someday", src: "https://linksalad.net/RlAtoLMxrT" },
   ];
   return (
-    <section class="grid m-10 md:mx-10 gap-10 md:gap-3 xl:gap-5 sm:grid-cols-1 md:grid-cols-3 xl:max-w-[1200px] xl:mx-auto">
+    <section class={classname}>
       {albums.map((album) => (
-        <Image key={album.id} name={album.title} a={album.link} />
+        <Image key={album.title} name={album.title} a={album.src} />
       ))}
     </section>
   );
