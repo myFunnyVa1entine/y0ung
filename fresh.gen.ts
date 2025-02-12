@@ -8,7 +8,7 @@ import * as $_layout from "./routes/_layout.tsx";
 import * as $archive_index from "./routes/archive/index.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $music_index from "./routes/music/index.tsx";
-
+import * as $MyLyrics_island from "./islands/MyLyrics-island.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -20,7 +20,9 @@ const manifest = {
     "./routes/index.tsx": $index,
     "./routes/music/index.tsx": $music_index,
   },
-  islands: {},
+  islands: {
+    "./islands/MyLyrics-island.tsx": $MyLyrics_island,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 
