@@ -1,7 +1,7 @@
 function Articles({ href }: { href: string }) {
   return (
     <article class="w-full py-4">
-      <img class="h-full object-fill" src={href} alt="home image" />
+      <img class="md:h-full object-cover" src={href} alt="home image" />
     </article>
   );
 }
