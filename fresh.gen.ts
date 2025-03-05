@@ -7,8 +7,8 @@ import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
 import * as $archive_index from "./routes/archive/index.tsx";
 import * as $index from "./routes/index.tsx";
-import * as $music_index from "./routes/music/index.tsx";
-import * as $MyLyrics_island from "./islands/MyLyrics-island.tsx";
+import * as $portfolio_index from "./routes/portfolio/index.tsx";
+
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -18,11 +18,9 @@ const manifest = {
     "./routes/_layout.tsx": $_layout,
     "./routes/archive/index.tsx": $archive_index,
     "./routes/index.tsx": $index,
-    "./routes/music/index.tsx": $music_index,
+    "./routes/portfolio/index.tsx": $portfolio_index,
   },
-  islands: {
-    "./islands/MyLyrics-island.tsx": $MyLyrics_island,
-  },
+  islands: {},
   baseUrl: import.meta.url,
 } satisfies Manifest;
 
